@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3691ac7ff1.js" crossorigin="anonymous"></script>
+    <title>shubham e-commerce</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 25px;
+        background-color: rgb(5, 5, 5);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+        z-index: 990;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    #navbar li {
+        list-style: none;
+        padding: 20px;
+        position: relative;
+    }
+
+    #navbar li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600px;
+        color: silver;
+        transition: 0.05 ease;
+
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+        color: coral;
+    }
+
+    #navbar li a ::after,
+    #navbar li a:hover::after {
+
+        content: "";
+        height: 2px;
+        width: 30%;
+        background: red;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+
+    }
+
+    #hero {
+        background-color: rgb(5, 5, 5);
+        background-image: url(./images02/Add\ a\ heading\ \(1\).png);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+        background-size: cover;
+        background-position: top 25% 0 right;
+        padding: 0px 80px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    #hero h4 {
+        padding: 15px;
+        color: aliceblue;
+
+    }
+
+    #hero h1 {
+        color: crimson;
+    }
+
+    #hero h2 {
+        color: white;
+    }
+
+    #hero button {
+        background-image: url(./images02/button-removebg-preview.png);
+        color: azure;
+        background-color: brown;
+        border: 0;
+        padding: 10px 50px 10px 50px;
+        background-repeat: no-repeat;
+        font-size: 16px;
+        font-weight: 600px;
+        cursor: pointer;
+
+    }
+
+    #hero p {
+        padding: 5px;
+        color: azure;
+
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .sec-p {
+        padding: 45px 80px;
+    }
+
+    #fe .box {
+        width: 180px;
+        padding: 15px 25px;
+        text-align: center;
+        box-shadow: 25px 20px 35px rgba(234, 4, 4, 0.03);
+        border: 1px solid black;
+        border-radius: 4px;
+        margin: 15px 0px;
+
+
+
+    }
+
+    #fe {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #fe .box :hover {
+        box-shadow: 15px 15px 65px rgba(208, 186, 231, 0.03);
+
+    }
+
+    #fe .box img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #fe .box h6 {
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        border-radius: 4px;
+        background-color: pink;
+        color: black;
+
+    }
+
+    #fe .box:nth-child(2) h6 {
+        background-color: aqua;
+    }
+
+    #fe .box:nth-child(3) h6 {
+        background-color: red;
+    }
+
+    #fe .box:nth-child(4) h6 {
+        background-color: rgb(150, 81, 254);
+    }
+
+    #fe .box:nth-child(5) h6 {
+        background-color: rgb(6, 67, 67);
+    }
+
+    #fe .box:nth-child(6) h6 {
+        background-color: rgb(147, 221, 19);
+    }
+
+    #proudct {
+        text-align: center
+    }
+
+    .container {
+        display: flex;
+
+        justify-content: space-between;
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+
+    #proudct .p1 {
+        border: 1px solid black;
+        width: 20%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 20px 25px 30x rgba(0, 0, 0, 0.3);
+        margin: 15px 0px;
+        position: relative;
+
+
+    }
+
+    #proudct .p1:hover {
+        box-shadow: 20px 20px 50x rgba(0, 0, 0, 0.7);
+        transition: 0.3s ease;
+
+    }
+
+    #proudct .p1 img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #proudct .p1 .p2 {
+        text-align: start;
+        padding: 8px 8px;
+    }
+
+    #proudct .p1 .p2 span {
+        color: darkslateblue;
+        font-style: italic;
+    }
+
+    #proudct .p1 .p2 h5 {
+        padding-top: 8px;
+        color: rgb(227, 93, 10);
+        font-size: 15px;
+    }
+
+    #proudct .p1 .p2 i {
+        font-size: 12px;
+        color: yellow;
+    }
+
+    #proudct .p1 .p2 h4 {
+        padding: 10px 0px;
+        color: black;
+        font-size: 16px;
+        font-weight: 600px;
+
+    }
+
+    #proudct .p1 .fa-solid {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        color: rgb(6, 6, 6);
+        line-height: 40px;
+        background-color: rgb(244, 211, 188);
+        font-weight: 500px;
+        border: 1px solid rgb(50, 15, 220);
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+
+    }
+
+    .sec-p2 {
+        margin: 40px 0px;
+    }
+
+    #banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-image: url(./images02/Untitled\ design.png);
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #banner h4 {
+        color: rgb(10, 230, 230);
+        font-size: 16px;
+        padding: 10px 0px;
+
+    }
+
+    #banner h1 span {
+        color: red;
+
+    }
+
+    button.normal {
+        padding: 10px 15px;
+        color: rgb(243, 237, 237);
+        background-color: rgb(4, 40, 72);
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600px;
+        cursor: pointer;
+        border: none;
+        transition: 0.2s;
+
+
+    }
+
+    #banner .normal:hover {
+        background: red;
+        color: black;
+    }
+
+    #sub-banner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #sub-banner .banner-box {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        background-image: url(./images02/w11.png  );
+
+        height: 62vh;
+        min-width: 550px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid black;
+    }
+
+    #sub-banner .banner-box h4 {
+        color: rgb(106, 2, 2);
+        font-size: 18px;
+        font-weight: 400px;
+        padding: 5px;
+    }
+
+    #sub-banner .banner-box span {
+        color: rgb(13, 12, 12);
+        font-size: 15px;
+        font-weight: 300px;
+        padding: 5px;
+    }
+
+    #sub-banner .banner-box h2 {
+        color: rgb(217, 12, 12);
+        font-size: 20px;
+        font-weight: 500px;
+        padding: 5px;
+    }
+
+    #sub-banner .banner-box button {
+        color: black;
+        background-color: aliceblue;
+        border-radius: 4px;
+        border: 1px solid black;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 200px;
+        margin-bottom: 10px 15px;
+
+    }
+
+    #sub-banner .banner-box:hover button {
+        color: red;
+        background-color: darkkhaki;
+        cursor: pointer;
+    }
+
+    #banner2 .banner-box {
+        display: flex;
+        align-items: flex-start;
+
+
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px;
+        background-image: url(./images02/bo1.png );
+        position: relative;
+        height: 40vh;
+        min-width: 30%;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid black;
+    }
+
+    #banner2 .banner-box h2 {
+        color: white;
+        font-size: 20px;
+        font-weight: 200px;
+        position: absolute;
+        bottom: 30px;
+
+    }
+
+    #banner2 .banner-box h3 {
+        color: white;
+        font-weight: 100px;
+        position: absolute;
+        bottom: 10px;
+
+    }
+
+    #banner2 .banner-box span {
+        color: red;
+        font-weight: 100px;
+
+    }
+
+    #banner2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 35px;
+    }
+
+    #new {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        background-image: url(./images02/bo2.png);
+        background-repeat: no-repeat;
+
+        height: 150px;
+        width: 100%;
+    }
+
+    #new .box5 h3 {
+        font-size: 22px;
+        font-weight: 700px;
+        color: white;
+        padding: 10px;
+
+    }
+
+    #new .box5 p {
+        font-size: 16px;
+        font-weight: 400px;
+        color: white;
+
+    }
+
+    #new .box5 span {
+        font-size: 16px;
+        font-weight: 400px;
+        color: rgb(214, 15, 15);
+        cursor: pointer;
+    }
+
+    #new .input {
+        height: 3.125rem;
+        padding: 0 1.20rem;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transparent;
+        outline: none;
+        border-radius: 4px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+    }
+
+    #new button {
+        background-color: rgb(7, 71, 7);
+        color: white;
+        white-space: nowrap;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+
+    }
+
+    #new .form {
+        display: flex;
+        width: 40%;
+
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: rgb(8, 8, 8);
+
+    }
+
+    footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+
+
+    }
+
+    footer.logo {
+        margin-bottom: 30px;
+    }
+
+    footer h4 {
+        font-size: 14px;
+        padding-bottom: 20px;
+        color: white;
+
+    }
+
+    footer p {
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: white;
+
+
+    }
+
+    footer a {
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(250, 246, 246);
+        margin-bottom: 10px;
+
+    }
+
+    footer .follow {
+        margin-top: 20px;
+    }
+
+    footer .follow i {
+        padding-right: 5px;
+        color: dimgray;
+        cursor: pointer;
+    }
+
+    footer .col1 .row img {
+        border: 1px solid green;
+        border-radius: 6px;
+    }
+
+    footer .col1 img {
+        margin: 10px 0 p1px 0;
+    }
+
+    footer .follow i:hover,
+    footer a:hover {
+        color: rgb(196, 9, 9);
+    }
+
+    footer .copy h5 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        position: relative;
+        top: 130px;
+        right: 400px;
+
+
+    }
+
+    img {
+        transition: all ease-in;
+    }
+
+    img:hover {
+        transform: scale(0.9);
+        transition: 0.2s;
+    }
+
+    #mobile {
+        display: none;
+        align-items: center;
+    }
+
+    #navbar #close {
+        display: none;
+    }
+
+    body {
+        background-color: white
+    }
+
+
+    @media (max-width:799px) {
+        #navbar {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            position: fixed;
+            top: 0px;
+            right: -300px;
+            height: 100vh;
+            width: 200px;
+            background-color: rgb(59, 60, 57);
+            box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.2);
+            padding: 60px 0px 0px 10px;
+            transition: 0.3s;
+
+
+
+
+        }
+
+        #navbar #close {
+            display: initial;
+            position: absolute;
+            bottom: 470px;
+            left: 20px;
+            color: rgb(11, 10, 10);
+            font-size: 24px;
+        }
+
+        #navbar.active {
+            right: 0px;
+
+
+
+        }
+
+        #navbar #book2 {
+            display: none;
+
+
+
+        }
+
+        #header {
+            background-color: blue;
+        }
+
+        #navbar li {
+            margin-bottom: 15px;
+        }
+
+        #mobile {
+            display: flex;
+            align-items: center;
+        }
+
+        #mobile i {
+            padding-left: 20px;
+            font-style: 24px;
+            color: coral;
+
+        }
+
+        #fe {
+
+            justify-content: center;
+
+        }
+
+        #fe .box {
+
+            margin: 15px 15px;
+        }
+
+        .sec-p {
+            padding: 35px 35px;
+        }
+
+        .container {
+            justify-content: center;
+        }
+
+        #proudct .p1 {
+
+            margin: 15px;
+
+
+
+        }
+
+        #banner {
+            height: 200px;
+            width: 100%;
+
+        }
+
+        #sub-banner .banner-box {
+
+            height: 40vh;
+            min-width: 100%;
+            background-image: url(./images02/w8-removebg-preview.png );
+
+
+
+        }
+
+        #banner2 {
+
+            padding: 0 40px;
+        }
+
+        #banner2 .banner-box {
+
+            width: 32%;
+            height: 250px;
+
+        }
+
+        #banner2 .banner-box h3 {
+
+            position: absolute;
+            top: 20px;
+        }
+
+        footer .copy h5 {
+
+
+
+            position: relative;
+            top: 120px;
+            right: 75px;
+            height: 20vh;
+        }
+
+        #banner2 .banner-box {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 10px;
+        }
+
+        #new .input {
+            height: 2.125rem;
+
+        }
+
+        button.normal {
+            padding: 7px 7px;
+
+        }
+
+    }
+
+    @media(max-width:399px) {
+        #fe {
+
+            justify-content: center;
+
+        }
+
+        .sec-p {
+            padding: 20px;
+        }
+
+        #fe .box {
+            width: 150px;
+
+            margin: 0px 0px 15px 0px;
+        }
+
+        #fe {
+            justify-content: space-between;
+        }
+
+        #proudct .p1 {
+
+            width: 100%;
+            height: 50vh;
+
+        }
+
+        #sub-banner .banner-box {
+            width: 100%;
+            height: 40vh;
+
+        }
+
+        #sub-banner .banner-box {
+            margin-top: 20px;
+
+
+        }
+
+        #banner2 .banner-box {
+            width: 100%;
+            height: 250px;
+        }
+
+        #banner2 {
+            padding: 0 20px;
+        }
+
+        #banner2 .banner-box {
+            margin-top: 20px;
+        }
+
+
+
+        #new .form {
+
+            width: 100%;
+            padding: 10px;
+
+        }
+
+
+        footer .copy h5 {
+
+
+
+            position: relative;
+            top: 130px;
+            right: 80px;
+            height: 100%;
+        }
+
+        #new {
+
+            height: 100%;
+            width: 600px;
+        }
+
+        #new .input {
+            width: 32%;
+
+        }
+
+
+
+        .cpoy h5 {
+            color: aqua;
+
+        }
+
+        #sub-banner .banner-box h4 {
+
+            padding: 20px 0px;
+
+        }
+
+        #proudct .p1 .p2 {
+
+            padding: 8px 8px;
+        }
+
+
+
+
+
+
+
+    }
+</style>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="./images02/Shubham_logo-removebg-preview.png" style="width: 150px;" height="80px"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="https://www.google.com">Home</a></li>
+                <li><a href="https://www.google.com">Shop</a></li>
+                <li><a href="bloghtml">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contect.html">Contact</a></li>
+
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping" id="book2"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-circle-xmark" id="close"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="book" class="fas fa-outdent"></i>
+        </div>
+
+    </section>
+
+    <section id="hero">
+        <h4>Trade in offer</h4>
+        <h2>super value deal</h2>
+        <h1>Onall proudct</h1>
+        <p>Save more with copuons & up to 70% off!</p>
+        <a href="https://www.google.com"><button>shop now</button></a>
+    </section>
+
+    <section id="fe" class="sec-p">
+        <div class="box">
+            <img src="./images02/mango-removebg-preview.png" height="170px " width="160px">
+            <h6>free shipping</h6>
+
+        </div>
+        <div class="box">
+            <img src="./images02/cloth_store-removebg-preview.png" height="170px " width="160px">
+            <h6>online order</h6>
+
+        </div>
+        <div class="box">
+            <img src="./images02/mango-removebg-preview.png" height="170px " width="160px">
+            <h6>save money</h6>
+
+        </div>
+        <div class="box">
+            <img src="./images02/cloth_store-removebg-preview.png" height="170px " width="160px">
+            <h6>progerss</h6>
+
+        </div>
+        <div class="box">
+            <img src="./images02/dg6-removebg-preview.png" height="170px " width="160px">
+            <h6>happy sale</h6>
+
+        </div>
+        <div class="box">
+            <img src="./images02/dg03-removebg-preview.png" height="170px " width="160px">
+            <h6>help</h6>
+
+        </div>
+    </section>
+
+    <section id="proudct" class="sec-p">
+        <h2>Feacture Proudcts</h2>
+        <p>summer collection new morden design</p>
+        <div class="container">
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts5.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="banner" class="sec-p2">
+        <h4>Repair services</h4>
+        <h1>Up to <span>70% Off </span>-All T-shirt and Accessories</h1>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="proudct" class="sec-p">
+        <h2>New Arrivel</h2>
+        <p>summer collection new morden design</p>
+        <div class="container">
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="p1">
+                <img src="./images02/ts6.jpg" alt="">
+                <div class="p2">
+                    <span>adidas</span>
+                    <h5>galiliyo fasion t-shirt></h5>
+                    <div class="star">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>340/-</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="sub-banner" class="sec-p">
+        <div class="banner-box">
+            <h4>Crazy Deals</h4>
+            <h2>Buy 1 Get 1 free</h2>
+            <span>the best classic dress is on sale at cara</span>
+            <button>learn more</button>
+        </div>
+        <div class="banner-box">
+            <h4>Crazy Deals</h4>
+            <h2>Buy 1 Get 1 free</h2>
+            <span>the best classic dress is on sale at cara</span>
+            <button>learn more</button>
+        </div>
+
+    </section>
+
+    <section id="banner2" class="sec-p ">
+        <div class="banner-box">
+
+            <h2>SEASNOAL SALE</h2>
+            <h3>Winter collection <span>50% off</span></h3>
+
+
+        </div>
+        <div class="banner-box">
+
+            <h2>SEASNOAL SALE</h2>
+            <h3>Winter collection <span>50% off</span></h3>
+
+
+        </div>
+        <div class="banner-box">
+
+            <h2>SEASNOAL SALE</h2>
+            <h3>Winter collection <span>50% off</span></h3>
+
+
+        </div>
+        .
+    </section>
+
+    <section id="new" class="sec-p2 sec-p">
+        <div class="box5">
+            <h3>Sign For a Newsletters</h3>
+            <p>Get email updates abouts our website <span> spacile offer</span> </p>
+        </div>
+        <div class="form">
+            <input class="input" type="text" placeholder="Your Email addredss">
+            <button class="normal">Sign Up</button>
+
+        </div>
+    </section>
+
+    <footer class="sec-p">
+        <div class="col">
+            <img src="./images02/Shubham_logo-removebg-preview.png" class="logo" width="150px" height="100px">
+            <h4>Contact ,</h4>
+            <p><strong>addredss :</strong>Time Square Arcade, Ahemababad, </p>
+            <p><strong>Mobile no :</strong> 9714374900 </p>
+            <p><strong> Toll Free No:</strong> 18002009575 </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icone">
+                    <i class="fab fa-facebook -f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col">
+            <h4>ABOUT</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Payment</a>
+            <a href="#">security</a>
+            <a href="#">Shipping</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sales Inquiry</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Site Map</a>
+            <a href="#">security</a>
+            <a href="#">Shipping</a>
+        </div>
+        <div class="col1">
+            <h4>INSTALL APP</h4>
+            <p>form app store and google pay</p>
+            <div class="row">
+                <img src="./images02/goplay-removebg-preview.png" width="100px">
+                <img src="./images02/app-removebg-preview.png" width="100px">
+            </div>
+
+            <div class="row">
+                <p>Secured Payment Getwayes</p>
+                <img src="./images02/p_card-removebg-preview.png" width="150px">
+
+            </div>
+            <div class="copy">
+                <h5>©Subham2023.All right reserved </h5>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+<script>
+    const bar = document.getElementById('book');
+    const close = document.getElementById('close');
+    const nav = document.getElementById('navbar');
+
+
+    if (bar) {
+        bar.addEventListener('click', () => {
+            nav.classList.add('active');
+        })
+
+    }
+    if (close) {
+        close.addEventListener('click', () => {
+            nav.classList.remove('active');
+        })
+
+    }
+
+
+
+
+
+
+</script>
+
+</html>
